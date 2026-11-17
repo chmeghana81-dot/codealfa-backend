@@ -1,0 +1,32 @@
+# from django.urls import path
+
+# from .views import (
+#     PlaceOrderAPIView,
+#     MyOrdersAPIView,
+#     OrderDetailAPIView,
+#     AdminAllOrdersAPIView,
+# )
+
+# urlpatterns = [
+#     path('place/', PlaceOrderAPIView.as_view(), name='place-order'),
+#     path('my-orders/', MyOrdersAPIView.as_view(), name='my-orders'),
+#     path('<int:pk>/', OrderDetailAPIView.as_view(), name='order-detail'),
+#     path('admin/', AdminAllOrdersAPIView.as_view(), name='admin-all-orders'),
+# ]
+
+
+from django.urls import path
+
+from .views import (
+    PlaceOrderAPIView,
+    MyOrdersAPIView,
+    OrderDetailAPIView,
+    AdminAllOrdersAPIView,
+)
+
+urlpatterns = [
+    path('place/', PlaceOrderAPIView.as_view(), name='place-order'),
+    path('my-orders/', MyOrdersAPIView.as_view(), name='my-orders'),
+    path('<int:pk>/', OrderDetailAPIView.as_view(), name='order-detail'),
+    path('admin/', AdminAllOrdersAPIView.as_view(), name='admin-all-orders'),
+]
