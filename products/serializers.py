@@ -30,3 +30,15 @@ class WishlistSerializer(serializers.ModelSerializer):
         model = WishlistItem
         fields = ["id", "product", "product_details", "created_at"]
         read_only_fields = ["id", "created_at"]
+
+
+class AllProductSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Product
+        fields = "__all__"
+
+
+class AllCategorySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Category
+        fields = "__all__"

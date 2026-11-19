@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "name": "Electronics",
+    "description": "Electronic gadgets and accessories"
+  },
+  {
+    "id": 2,
+    "name": "Toys",
+    "description": ""
+  },
+  {
+    "id": 3,
+    "name": "Home Appliance",
+    "description": ""
+  },
+  {
+    "id": 4,
+    "name": "Men's Fashion",
+    "description": ""
+  },
+  {
+    "id": 5,
+    "name": "Women's Fashion",
+    "description": ""
+  },
+  {
+    "id": 6,
+    "name": "Footwear",
+    "description": ""
+  },
+  {
+    "id": 7,
+    "name": "Beauty & Personal Care",
+    "description": ""
+  },
+  {
+    "id": 8,
+    "name": "Home & Kitchen",
+    "description": ""
+  },
+  {
+    "id": 9,
+    "name": "Accessories",
+    "description": ""
+  },
+  {
+    "id": 10,
+    "name": "Wrist Watch",
+    "description": ""
+  },
+  {
+    "id": 11,
+    "name": "Sunglasses",
+    "description": ""
+  },
+  {
+    "id": 12,
+    "name": "Kids Wear",
+    "description": ""
+  },
+  {
+    "id": 13,
+    "name": "Sports & Fitness",
+    "description": "Sports equipment and fitness accessories"
+  },
+  {
+    "id": 14,
+    "name": "Bags & Luggage",
+    "description": "Travel bags, backpacks and handbags"
+  },
+  {
+    "id": 15,
+    "name": "Books & Stationery",
+    "description": "Books, notebooks and office stationery"
+  },
+  {
+    "id": 16,
+    "name": "Toys & Games",
+    "description": "Educational toys and fun games for children"
+  },
+  {
+    "id": 17,
+    "name": "Pet Supplies",
+    "description": "Pet food, toys and accessories"
+  },
+  {
+    "id": 18,
+    "name": "Grocery & Essentials",
+    "description": "Daily grocery and household essentials"
+  }
+]
