@@ -22,6 +22,17 @@ class CartItemSerializer(serializers.ModelSerializer):
     def get_subtotal(self, obj):
         return obj.product.price * obj.quantity
 
+    def get_product_image(self, obj):
+        if not obj.product.image:
+            return None
+    
+        request = self.context.get("request")
+    
+        if request:
+            return request.build_absolute_uri(obj.product.image.url)
+    
+        return obj.product.image.url
+
 
 class CartSerializer(serializers.ModelSerializer):
     items = CartItemSerializer(many=True, read_only=True)
