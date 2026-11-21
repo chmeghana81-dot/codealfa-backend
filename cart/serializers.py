@@ -35,7 +35,7 @@ class CartItemSerializer(serializers.ModelSerializer):
 
 
 class CartSerializer(serializers.ModelSerializer):
-    items = CartItemSerializer(many=True, read_only=True)
+    items = CartItemSerializer(many=True, read_only=True,context={"request": request})
     total_price = serializers.SerializerMethodField()
     username = serializers.CharField(source="user.username", read_only=True)
 
