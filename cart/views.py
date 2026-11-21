@@ -14,7 +14,7 @@ class CartAPIView(APIView):
 
     def get(self, request):
         cart, _ = Cart.objects.get_or_create(user=request.user)
-        return Response(CartSerializer(cart).data)
+        return Response(CartSerializer(cart,context={"request": request}).data)
 
     @transaction.atomic
     def post(self, request):
@@ -92,7 +92,7 @@ class CartAPIView(APIView):
 
         cart_item.save()
         return Response(
-            CartSerializer(cart).data,
+            CartSerializer(cart,context={"request": request}).data,
             status=status.HTTP_200_OK
         )
 
@@ -149,7 +149,7 @@ class CartItemDetailAPIView(APIView):
 
         cart = cart_item.cart
         cart_item.delete()
-        return Response(CartSerializer(cart).data)
+        return Response(CartSerializer(cart,context={"request": request}).data)
 
 
 class AdminAllCartsAPIView(APIView):
@@ -160,4 +160,4 @@ class AdminAllCartsAPIView(APIView):
             "user"
         ).prefetch_related("items__product")
 
-        return Response(CartSerializer(carts, many=True).data)
+        return Response(CartSerializer(carts, many=True,context={"request": request}).data)
